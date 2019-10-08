@@ -1,0 +1,33 @@
+.sort {
+	
+	thead {
+		border: none;
+	}
+}
+
+.sort__item {
+	padding: 0 10px;
+
+	&.sort__item--inactive {
+		opacity: 0.7;
+	}
+}
+
+.sort__label {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.sort__icon {
+	display: flex;
+	flex: 0 0 14px;
+	width: 14px;
+	margin-left: 5px;
+
+	svg {
+		fill: #FFF;
+	}
+}

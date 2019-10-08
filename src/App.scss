@@ -1,0 +1,80 @@
+@import './styles/config.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+#theBody {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  &:before {
+    @include media('small') {
+      content: 'small';
+    }
+    @include media('medium') {
+      content: 'medium';
+    }
+    @include media('large') {
+      content: 'large';
+    }
+    @include media('xlarge') {
+      content: 'xlarge';
+    }
+
+    position: absolute;
+    left: -90210px;
+    content: 'xsmall';
+  }
+}
+
+
+#theBucket {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: 'Roboto Condensed',  Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1.25;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.main {
+  width: 100%;
+  margin-left: 0;
+  transition: margin-left,125ms;
+}
+
+.main__content {
+  @include media('medium') {
+    padding: 20px;
+  }
+  
+  padding: 0;
+}
+
+.sidebar-is-open .main {
+  margin-left: 250px;
+}
+
+.theTable {
+  border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+

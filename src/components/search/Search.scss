@@ -1,0 +1,77 @@
+@import '/../../styles/config.scss';
+
+.search {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	margin-top: 20px;
+
+	@include media('medium') {
+		margin: 0;
+	}
+}
+
+.search__input {
+	width: auto;
+	height: 45px;
+	padding: 5px 20px;
+	border: 0;
+	border-radius: 3px;
+
+	&:focus {
+		border: 0;
+		outline: none;
+	}
+}
+
+.search__helper {
+	display: block;
+	flex: 0 0 auto;
+	color: #FFF;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 110px;
+	
+	@include media('medium') {
+		width: auto;
+		margin-right: 20px;
+		font-size: 14px;
+	}
+}
+
+.search__clear {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+.search__clear__icon {
+	position: relative; 
+	display: block;
+	width: 20px; 
+	height: 20px;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		content: '';
+		display: block;
+		width: 15px; 
+		height: 3px; 
+		background-color: #000;
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		content: '';
+		display: block;
+		width: 15px; 
+		height: 3px; 
+		background-color: #000;
+		transform: rotate(-45deg);
+	}
+}

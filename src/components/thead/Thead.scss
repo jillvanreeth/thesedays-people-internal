@@ -1,0 +1,22 @@
+@import '/../../styles/config.scss';
+
+.thead {
+	border: none;
+	background-color: #00D1D9;
+	display: none;
+
+	td {
+		padding: 10px 0;
+	}
+
+	th {
+		padding: 0 10px;
+		color: #FFF;
+		font-weight: 700;
+		border: none;
+	}
+
+	@include media('medium') {
+		display: table-header-group;
+	}
+}

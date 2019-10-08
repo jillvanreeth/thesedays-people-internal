@@ -1,0 +1,33 @@
+@import '/../../styles/config.scss';
+
+.amount {
+	@include media('medium') {
+		flex-direction: row;
+	}
+
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.amount__select {
+	width: auto;
+	height: 45px;
+	padding: 5px 20px;
+	border: 0;
+}
+
+.amount__helper {
+	display: block;
+	width: 110px;
+	color: #FFF;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	@include media('medium') {
+		width: auto;
+		margin-left: 20px;
+		font-size: 14px;
+	}
+}

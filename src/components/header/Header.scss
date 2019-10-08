@@ -1,0 +1,19 @@
+@import '/../../styles/config.scss';
+
+.header {
+	@include media('medium') {
+		padding: 20px;
+	}
+
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.header__inner {
+	position: relative;
+	display: flex;	
+	justify-content: center;
+	align-items: center;
+}

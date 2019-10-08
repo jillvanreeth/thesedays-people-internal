@@ -1,0 +1,59 @@
+@import '/../../styles/config.scss';
+
+.person {
+	@include media('medium') {
+		display: table-row;
+	}
+	display: block;
+	padding: 15px 0 20px;
+	border-top: 1px dashed #E5E5E5;
+
+	&.odd {
+		background-color: #F9F9F9;
+	}
+
+	&.even {
+		background-color: #FFF;
+	}
+
+	&:first-child {
+		border: none;
+	}
+
+	&:hover {
+		background-color: lighten(#00D1D9, 50);
+	}
+}
+
+.person__data {
+	@include media('medium') {
+		display: table-cell;
+		padding: 15px 10px;
+		&:before {
+			display: none;
+		}
+	}
+
+	display: flex;
+	align-items: center;
+	padding: 5px 10px 0;
+	word-break: break-word;
+	
+	&:before {
+		float: left;
+		width: 80px;
+		font-size: 10px;
+		font-weight: bold;
+		text-transform: uppercase;
+		content: attr(data-label);
+	}
+}
+
+.person__mugshot {
+	@include media('medium') {
+		display: table-cell;
+    padding: 15px 10px;
+	}
+
+	display: none;
+}

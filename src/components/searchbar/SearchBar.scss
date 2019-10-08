@@ -1,0 +1,19 @@
+@import '/../../styles/config.scss';
+
+.searchBar {
+	@include media('medium') {
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		padding: 50px 20px;		
+	}
+
+	display: flex;
+	flex-direction: column;
+	padding: 20px 10px;
+	background: #00D1D9 url('./graphics/bg-balloons.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	align-items: flex-start;
+}
